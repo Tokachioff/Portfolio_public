@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+		<meta charset="utf-8">
+        <title>Portfolio | Nathanaël Galat</title>
+        <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css" media="screen" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#bio">A Propos</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="dropdown">
+                    <a class="open_dropdown" onclick="toggleMenu()"> 🇫🇷 Français <img src="image/fleche_bas.png"></a>
+                    <div class="dropdown_content" id="dropdownMenu">
+                        <a href="#"> 🇬🇧 English</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="contenu">
+                <article id="accueil">
+                    <h1><span class="auto_text"></span></h1>
+                    <h2>Développeur informatique</h2>
+                    <h3>Nathanaël Galat</h3>
+                </article>
+                <article id="bio">
+                    <h2>A Propos :</h2>
+                    <section>
+                        <nav>
+                            <button class="tablinks" onclick="openCity(event, 'propos')"> A Propos De Moi </button>
+                            <button class="tablinks" onclick="openCity(event, 'competences')"> Mes Compétences </button>
+                        </nav>
+                        <div class="conteneur">
+                            <div id="propos" class="tab_content">
+                                <p>Bonjour</p>
+                            </div>
+                            <div id="competences" class="tab_content">
+                                <p>Au revoir</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <article id="formation">
+                    <div>
+                        <h2>Parcours Scolaire :</h2>
+                        <section>
+                            <h3>BUT Informatique</h3>
+                            <h4>En 1ère année de formation..</h4>
+                            <h4>I.U.T.2 de Grenoble, France</h4>
+                        </section>
+                        <section>
+                            <h3>Baccalauréat Général</h3>
+                            <h4>Spécialités: NSI et Maths</h4>
+                            <h4>Diplomé avec mention assez bien</h4>
+                            <h4>Lycée Louis Modeste Leroy à Evreux, France</h4>
+                        </section>
+                        <section>
+                            <h3>Brevet des collèges</h3>
+                            <h4>Diplomé avec mention bien</h4>
+                            <h4>Collège Marcel Pagnol à Gravigny, France</h4>
+                        </section>
+                    </div>
+                    <span class="timebar"></span>
+                    <div>
+                        <h2>Expériences Professionnelles :</h2>
+                        <section class="margt">
+                            <h3>Equpier Polyvalent</h3>
+                            <h4>Mcdonald's</h4>
+                            <h4>Evreux, France</h4>
+                        </section>
+                        <section class="margb">
+                            <h3>Stage Main-d'oeuvre</h3>
+                            <h4>Galat Entreprise</h4>
+                            <h4>Dardez, France</h4>
+                        </section>
+                    </div>
+                </article>
+                <article id="projets">
+                    <h2> Mes Projets :</h2>
+                    <div class="projets_part">
+                        <button> <img src="image/back.png"> </button>
+                        <section class="ext">
+                            <h2> Projets 2 </h2>
+                        </section>
+                        <section class="int">
+                            <h2> Projets 1 </h2>
+                            <a href="Projet_1.html">Lien vers le premier projet</a>
+                        </section>
+                        <section class="ext">
+                            <h2> Projets 3 </h2>
+                        </section>
+                        <button> <img src="image/back.png"> </button>
+                    </div>
+                </article>
+                <article id="contact">
+                    <h2> Me contacter : </h2>
+                    <p>Si vous êtes intéressé(e) par mon profil, n'hésitez pas à me contacter en utilisant le formulaire ci-dessous ou via mes réseaux.</p>
+                    <div class="contactpart">
+                        <section class="formulaire">
+                            <input class="taille" type="email" name="Email" placeholder="Email" required><br>
+                            <input class="taille" type="text" name="Objet" placeholder="Objet" required><br>
+                            <h3>Message :</h3>
+                            <textarea type="text" name="Message"></textarea>
+                            <input class="bouton" type="submit" value="Envoyer">
+                        </section>
+                        <section class="reseaux">
+                            <div>
+                                <a href="CV Galat Nathanael.pdf" download="CV Galat Nathanael"><img src="image/telecharger_2.png">Mon CV</a>
+                                <a href="https://www.linkedin.com/in/nathana%C3%ABl-galat-06290534a/" target="_blank"><img src="image/linkedin.png"><p>Nathanaël Galat</p></a>
+                            </div>
+                            <div>
+                                <a href="https://github.com/Tokachioff" target="_blank"><img src="image/github.png">Tokachioff</a>
+                                <a href="https://www.instagram.com/tokachi_off/" target="_blank"><img src="image/Instagram.png">tokachi_off</a>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </main>
+        
+        <script src = "java.js"></script>
+    </body>
+</html>
