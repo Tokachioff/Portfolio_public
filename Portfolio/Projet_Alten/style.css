@@ -1,0 +1,423 @@
+nav.burger {
+  position: fixed;
+  width: 100%;
+  background-color: #1A4474;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5%;
+  margin-right: 2%;
+  width: 50%;
+  padding: 0px;
+  padding-right: 1%;
+  margin-bottom: 0px;
+}
+
+header nav ul li {
+  list-style-type: none;
+  height: fit-content;
+  
+}
+
+header nav ul li:last-child {
+  margin-right: 5%;
+}
+
+body h1 {
+  text-align: center;
+}
+
+body section ul:first-child li{
+  list-style-type: none;
+}
+
+body section ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  gap: 5px;
+  background-color: white;
+  border-radius: 3px;
+  width: max-content;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+body section ul li {
+  list-style-type: none;
+}
+
+body section ul li:first-child {
+  padding-left: 5px;
+}
+
+body section ul li:nth-child(2) {
+  padding-left: 5px;
+}
+
+body section ul li:nth-child(4) {
+  padding-left: 5px;
+}
+
+body button {
+  background-color: blue;
+  color: white;
+  border-radius: 3px;
+  font-size: 2ch;
+}
+
+body section h1:first-child {
+  background-color: #1A4474;
+  color: white;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #1A4474 !important;
+}
+
+.logo {
+  margin-left: 2%;
+  width: 30%;
+}
+
+.photo_environnement {
+  width: 100%;
+}
+
+.slogan-container {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  width: 25%;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.slogan {
+  top: 35%;
+  left: 15%;
+  font-size: 250%;
+  color: #62d050;
+}
+
+.button-1{
+  background-color: white;
+  color: black;
+  border: 2px solid blueviolet;
+  padding: 10px 4%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+  cursor: pointer;
+}
+  
+.button-1:hover, .button-1:active{
+  background-color: blueviolet;
+  color: white;
+  transform: scale(1.05);
+}
+
+.button-2 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: Phantomsans, sans-serif;
+  font-size: 24px;
+  line-height: 2em;
+  height: 100%;
+  max-height: 54px;
+  max-width: 100%;
+  padding: 3px;
+  padding-left: 5%;
+  padding-right: 105%;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button-2:active,
+.button-2:hover {
+  outline: 0;
+  color:#EE6F01;
+  transform: scale(1.1);
+}
+
+/* MENU "TAB" CONTENEUR" */
+.tab-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fdf7f0;
+}
+
+/* MENU "TAB"*/
+body div {
+flex-grow: 2;
+text-align: center;
+}
+
+body h2 {
+font-size: xx-large;
+}
+
+body div img {
+padding-top: 50px;
+width: 100%;
+max-width: 620px;
+height: 416px;
+}
+
+.tab {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: baseline;
+  border-right: 1px solid gray;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+  width: 100%;
+  text-align: initial;
+  color: black;
+}
+
+.tab button:hover {
+  color:#6E9CFA;
+}
+
+.tab button.active {
+  font-weight: bold;
+  color:#6E9CFA;
+  border-left: 5px solid #6E9CFA;
+  background-color: #fdf7f0;
+  border-radius: 0px;
+}
+
+/* CONTENT */
+.tabcontent {
+  display: none;
+  width: 75%;
+  background-color: lightgray;
+  font-size: large;
+} 
+
+.tabcontent p {
+  margin-top: 20px;
+}
+
+.open-btn:link, .close-btn:link {
+  display: none;
+}
+
+.open-btn-2, .close-btn-2 {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  display: flex !important;
+  position: fixed;
+  background-color: #1A4474;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+}
+
+footer p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 8px;
+  margin-left: 20px;
+  color: white;
+}
+
+footer .button-2 {
+  margin-left: 5%;
+  margin-top: 8px;
+  height: 30px;
+  width: 196px;
+  padding-right: 0px;
+  padding-left: 0px;
+  line-height: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo{
+    width: 95%;
+  }
+  
+  nav > a:first-child {
+    width: 20%;
+    max-height: 100px;
+    max-width: 110px;
+  }
+
+  nav.burger {
+    height: 100px;
+  }
+
+  nav ul {
+    display: flex;
+    position: fixed;
+    margin: 0;
+    transform: translateY(-100%);
+    background-color: #1A4474;
+    width: 100%;
+    height: 100px;
+    transition: transform 0.2s;
+    align-items: center;
+    gap: 9%;
+  }
+
+  .open-btn:link, .close-btn:link {
+    display: block;
+    background-color: #1A4474;    
+    text-decoration: none;
+  }
+
+  .close-btn, .open-btn {
+    top: 20%;
+    font-size: 40px;
+    font-family: monospace;
+    color: black;
+    margin-right: 20px;
+  }
+
+  .open-btn:active, .open-btn:hover, .close-btn:active, .close-btn:hover{
+    color: white;
+  }
+
+  nav.burger.visible ul {
+    transform: translateY(0%);
+    width: 100%;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  header nav ul {
+    gap: 0%;
+    margin-right: 10%;
+  }
+
+  header nav ul li {
+    padding: 0px;
+    width: fit-content;
+    font-size: x-small;
+    margin: 4%;
+  }
+
+  .button-2 {
+    font-size: 1em;
+    width: 5%;
+  }
+  
+  .slogan-container {
+    top: 15%;
+    left: 10% ;
+    width: 50%;
+  }
+
+  .slogan {
+    font-size: 2ch;
+  }
+
+  .sup{
+    display: none;
+  }
+  
+  .open-btn-2, .close-btn-2 {
+    display: block;
+  }
+
+  div.tab.visible{
+    transform:translateX(0%);
+    position:absolute;
+    height: 105%;
+  }
+
+  div.tab{
+    display: flex;
+    position: fixed;
+    margin: 0;
+    transform: translateX(-100%);
+    width: 100%;
+    transition: transform 0.2s;
+    align-items: center;
+    background-color: #fdf7f0;
+    height: 100%;
+  }
+
+  .Map {
+    max-width: max-content;
+    max-height: 211px;
+  }
+
+  /* OPEN ET CLOSE BOUTON 2 */
+  /* ATTENTION LE .close-btn-2 est également configurer avec .open-btn et .close-btn */
+  .close-btn-2 {
+    font-size: 35px;
+    width: 100%;
+    color: black;
+  }
+
+  .close-btn-2:active, .close-btn-2:hover {
+    background-color: #fdf7f0;
+    color: #EE6F01;
+    padding-bottom: 1.5%;
+  }
+
+  .close-btn-2:link{
+    text-decoration: none;
+  }
+
+  .open-btn-2 {
+    display: block;
+    position: absolute;
+  }
+
+  .open-btn-2 img{
+    width: 64px;
+    height: 64px;
+    padding-top: 0px;
+  }
+
+  .open-btn-2:active, .open-btn-2:hover {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(600%) hue-rotate(360deg) brightness(100%) contrast(100%);
+  }
+
+  /* FOOTER */
+  footer p{
+    font-size: smaller;
+    margin-top: 4px;
+  }
+
+  footer .button-2{
+    margin-top: 5px;
+  }
+}
