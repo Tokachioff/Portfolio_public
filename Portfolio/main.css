@@ -699,7 +699,7 @@ input::placeholder, .formulaire h3 {
         position: fixed;
         width: 100%;
         align-items: center;
-        height: 9vh;
+        height: 10vh;
     }
 
     .placeholder {
@@ -905,7 +905,7 @@ input::placeholder, .formulaire h3 {
     #formation section {
         width: fit-content;
         font-size: small;
-        max-width: 150px;
+        min-width: 150px;
     }
 
     #formation div {
