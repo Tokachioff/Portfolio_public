@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+		<meta charset="utf-8">
+		<title>Portfolio | Nathanaël Galat</title>
+        <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Projet_1.css" media="screen" />
+    </head>
+
+    <body>
+        <nav>
+            <button class="back" onclick= "window.location = 'main.html#projets'"><img src = "image/back_2.png"> Accueil </button>
+            <div>
+                <img class = "pp" src="image/logo.png">
+                <h1>Nathanaël Galat</h1>
+            </div>
+            <div>
+                <h2>Mes Autres Projets :</h2>
+                <ul>
+                    <li><a href="Projet_1.html">Jeu De Dames</a></li>
+                    <li><a href="Projet_2.html">Site Alten</a></li>
+                    <li><a href="#">Aqua Athletics</a></li>
+                    <li><a href="Projet_4.html">Étude d'accidentologie</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="open_dropdown" onclick="toggleMenu()"> 🇫🇷 Français <img src="image/fleche_bas.png"></a>
+                <div class="dropdown_content" id="dropdownMenu">
+                    <a href="EN/Projet_5_EN.html"> 🇬🇧 English</a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="affiche">
+            <ul>
+                <li><a href="Projet_1.html">Jeu De Dames</a></li>
+                <li><a href="Projet_2.html">Site Alten</a></li>
+                <li><a href="#">Aqua Athletics</a></li>
+                <li><a href="Projet_4.html">Étude d'accidentologie</a></li>
+            </ul>
+        </nav>
+
+        <section class="background_4">
+            <div class="lock">
+                <a href="main.html#projets"><img class = "pp" src="image/logo.png"></a> 
+                <div class="dropdown_2">
+                    <a class="open_dropdown" onclick="toggleMenu_2()"> 🇫🇷 FR <img src="image/fleche_bas.png"></a>
+                    <div class="dropdown_content" id="dropdownMenu_2">
+                        <a href="EN/Projet_5_EN.html"> 🇬🇧 EN</a>
+                    </div>
+                </div>
+                <a href="#menu" class="open-btn"> &#9776 </a>
+            </div>
+
+            <div class="placeholder"></div>
+
+            <h1>Autres Projets</h1>
+
+            <div class="principal">
+                <article class="gauche">
+                    <p>Dans le cadre de notre formation, nous avons réalisé un projet en binôme dont l’objectif était de développer un programme capable de classer automatiquement des dépêches d’actualité par thématique. L’enjeu principal était d’optimiser à la fois la rapidité de traitement et la précision du classement, en s’appuyant sur des techniques d’analyse de texte. Le programme devait être capable d’identifier le sujet principal de chaque dépêche parmi plusieurs catégories.</p>
+                </article>
+                <article class="droite">
+                    <p>Le projet a été entièrement développé en Java, ce qui nous a permis d’approfondir notre maîtrise de la programmation orientée objet et des structures de données. Nous avons mis en place des algorithmes de traitement de texte, comme le calcul de la fréquence des mots et des méthodes de similarité, pour classer efficacement les dépêches. Le travail en binôme nous a aussi permis de développer notre capacité à collaborer et à structurer notre code en équipe.
+                        Le rapport est accessible <a href="rapport_FR.pdf">ici</a>.
+                    </p>
+                </article>
+                <article class="gauche">
+                    <p>Un autre projet que j’ai réalisé est un guide d’installation détaillé pour déployer un serveur Debian 12 sur une machine virtuelle. L’objectif était de fournir une documentation claire et accessible pour toute personne souhaitant installer et configurer Debian 12, en suivant une série d'étapes précises. Le guide inclut toutes les configurations de base nécessaires pour assurer une installation optimale et sécurisée du serveur, tout en tenant compte des différentes options de personnalisation possibles pendant l’installation.</p>
+                </article>
+                <article class="droite">
+                    <p>Ce projet m’a permis de renforcer mes compétences en administration système, notamment en ligne de commande et gestion des systèmes Linux. J’ai utilisé l'outil de virtualisation QEMU pour simuler l’installation et configurer l’environnement. L’aspect le plus important était de rendre le guide suffisamment détaillé et facile à suivre, en expliquant les différentes options de configuration et en fournissant des solutions aux problèmes courants rencontrés lors de l'installation. 
+                        Le guide est accessible <a href="#">ici</a>.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <script src = "java.js"></script>
+    </body>
+</html>
