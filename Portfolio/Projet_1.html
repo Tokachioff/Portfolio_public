@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+		<meta charset="utf-8">
+		<title>Portfolio | Nathanaël Galat</title>
+        <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Projet_1.css" media="screen" />
+    </head>
+
+    <body>
+        <nav>
+            <button class="back" onclick= "window.location = 'main.html#projets'"><img src = "image/back_2.png"> Accueil </button>
+            <div>
+                <img class = "pp" src="image/logo.png">
+                <h1>Nathanaël Galat</h1>
+            </div>
+            <div>
+                <h2>Mes Autres Projets :</h2>
+                <ul>
+                    <li><a href="Projet_2.html">Site Alten</a></li>
+                    <li><a href="#">Aqua Athletics</a></li>
+                    <li><a href="Projet_4.html">Étude d'accidentologie</a></li>
+                    <li><a href="Projet_5.html">Autres Projets</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="open_dropdown" onclick="toggleMenu()"> 🇫🇷 Français <img src="image/fleche_bas.png"></a>
+                <div class="dropdown_content" id="dropdownMenu">
+                    <a href="EN/Projet_1_EN.html"> 🇬🇧 English</a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="affiche">
+            <ul>
+                <li><a href="Projet_2.html">Site Alten</a></li>
+                <li><a href="#">Aqua Athletics</a></li>
+                <li><a href="Projet_4.html">Étude d'accidentologie</a></li>
+                <li><a href="Projet_5.html">Autres Projets</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="lock">
+                <a href="main.html#projets"><img class = "pp" src="image/logo.png"></a> 
+                <div class="dropdown_2">
+                    <a class="open_dropdown" onclick="toggleMenu_2()"> 🇫🇷 FR <img src="image/fleche_bas.png"></a>
+                    <div class="dropdown_content" id="dropdownMenu_2">
+                        <a href="EN/Projet_1_EN.html"> 🇬🇧 EN</a>
+                    </div>
+                </div>
+                <a href="#menu" class="open-btn"> &#9776 </a>
+            </div>
+
+            <div class="placeholder"></div>
+
+            <h1>Jeu De Dames</h1>
+
+            <div class="principal">
+                <article class="gauche">
+                    <p>En 2023, j'ai réalisé un projet personnel consistant en la création d'un jeu de dames en Python en utilisant la bibliothèque Tkinter pour l'interface graphique. Ce projet avait pour objectif de développer un jeu fonctionnel avec une interface intuitive, permettant à deux joueurs de s'affronter en respectant les règles officielles du jeu de dames. Travaillant seul sur ce projet, j’ai dû organiser mon travail de manière autonome, en planifiant les différentes étapes de développement : conception de la logique du jeu, implémentation des règles, gestion des déplacements et captures, ainsi que l’affichage dynamique du plateau.</p>
+                </article>
+                <article class="droite">
+                    <p>Ce projet m’a permis d’acquérir et de renforcer plusieurs compétences, notamment en programmation orientée objet, en gestion des événements avec Tkinter et en structuration de code modulaire. J'ai également perfectionné ma capacité à résoudre des problèmes logiques et à optimiser le code pour garantir un fonctionnement fluide et sans erreurs. En travaillant seul, j'ai développé une rigueur méthodologique et une autonomie accrue dans la gestion d'un projet informatique.</p>
+                </article>
+                <article class="gauche">
+                    <p>J’ai également créé un fichier ZIP contenant le jeu sous forme d’un exécutable (.exe), ce qui permet de l’exécuter facilement sans avoir à installer Python ou Tkinter. Vous pouvez télécharger le fichier ci-dessous pour tester le jeu directement sur votre ordinateur.</p>
+                </article>
+            </div>
+
+            <a href="jeu_de_dames.zip" class="button"><img src="image/telecharger.png"> Télécharger le jeu </a>
+        </section>
+
+        <script src = "java.js"></script>
+    </body>
+</html>
