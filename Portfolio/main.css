@@ -115,7 +115,7 @@ main {
 }
 
 article {
-    min-height: 900px;
+    min-height: 96vh;
     width: 100%;
     scroll-margin-top: 50px;
 }
@@ -1008,4 +1008,5 @@ input::placeholder, .formulaire h3 {
     #formation .formation_tel {
         right: 30% !important;
     }
+
 }
