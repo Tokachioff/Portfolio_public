@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit; // Stoppe l'exécution si l'email est invalide
     }
 
-    $headers = "From:moi@github.io\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
+    $headers = "From: no-reply@tokachi.alwaysdata.net\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
 
     if (!empty($email) && !empty($objet) && !empty($message)) {
         if (mail($destinataire, $objet, $message, $headers)) {
