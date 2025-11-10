@@ -115,7 +115,7 @@ main {
 }
 
 article {
-    min-height: 900px;
+    min-height: 96vh;
     width: 100%;
     scroll-margin-top: 50px;
 }
@@ -138,7 +138,7 @@ article {
 
 /* ----------------------------------------------------------------- ACCUEIL ----------------------------------------------------------------- */
 #accueil {
-    background-image: url("./image/main.jpg");
+    background-image: url("./image/5562006.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,7 +146,8 @@ article {
 }
 
 #accueil h1,#accueil h2,#accueil h3 {
-    color: #32CD32;
+    /*color: #420801a8;*/
+    color: #2c3e50;
 }
 
 #accueil h2 {
@@ -171,7 +172,7 @@ article {
     font-size: xxx-large;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 6px solid #228B22; /* Curseur clignotant */
+    border-right: 6px solid #2070a5; /* Curseur clignotant */
     animation: typing 6s steps(24, end) forwards, blink 0.7s infinite;
     padding: 10px 20px;
     transition: opacity 1.5s ease-in-out;
@@ -632,6 +633,7 @@ input:invalid:not(:placeholder-shown) {
     border-radius: 30px;
     padding: 5px;
     color: black;
+    height: fit-content;
 }
 
 input::placeholder, .formulaire h3 {
@@ -1008,4 +1010,5 @@ input::placeholder, .formulaire h3 {
     #formation .formation_tel {
         right: 30% !important;
     }
+
 }
