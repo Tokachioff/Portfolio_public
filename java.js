@@ -1,3 +1,12 @@
+/* Captcha */
+(function() {
+    var recaptchaScript = document.createElement('script');
+    recaptchaScript.src = "https://www.google.com/recaptcha/api.js";
+    recaptchaScript.async = true;
+    recaptchaScript.defer = true;
+    document.head.appendChild(recaptchaScript);
+})();
+
 /* Menu langue */
 function toggleMenu() {
     var menu = document.getElementById("dropdownMenu");
