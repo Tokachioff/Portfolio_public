@@ -13,28 +13,61 @@ function toggleMenu() {
     }
 }
 
+if (document.getElementById("dropdownMenu_2")) {
+    function toggleMenu_2() {
+        var menu2 = document.getElementById("dropdownMenu_2");
+        var img2 = document.querySelector(".dropdown_2 img"); 
+
+        if (menu2.style.display == "none") {
+            menu2.style.display = "block";
+            img2.classList.add("rotate");
+        }
+        else {
+            menu2.style.display = "none";
+            img2.classList.remove("rotate");
+        }
+    }
+}
+
 // Fermer le menu quand on clique en dehors
 window.onclick = function(event) {
     var menu = document.getElementById("dropdownMenu");
     var img = document.querySelector(".dropdown img");
-    
+
+    var menu2 = document.getElementById("dropdownMenu_2");
+    var img2 = document.querySelector(".dropdown_2 img");
+
     // Si on clique en dehors du menu ou du bouton, on ferme le menu
-    if (!event.target.closest('.dropdown') && menu.style.display === "block") {
+    if (!event.target.closest('.dropdown') && document.getElementById("dropdownMenu") && menu.style.display === "block") {
         menu.style.display = "none";
         if (img) { //s'assure que l'image existe
             img.classList.remove("rotate"); // Enlève la rotation quand on ferme
+        }
+    } else if (!event.target.closest('.dropdown_2') && document.getElementById("dropdownMenu_2") && menu2.style.display === "block") {
+        menu2.style.display = "none";
+        if (img2) { //s'assure que l'image existe
+            img2.classList.remove("rotate"); // Enlève la rotation quand on ferme
         }
     }
 }
 
 /* Effet phrase d'accueil */
 const text = document.querySelector(".auto_text");
+let phrases = [];
 
-const phrases = [
-    '"Transformer les idées en code et les projets en succès."',
-    '"Apprendre, coder, innover : mon quotidien en informatique."',
-    '"Passionné par l’informatique, motivé par les défis, prêt à innover !"'
-];
+if (document.getElementById("francais")) {
+    phrases = [
+        '"Transformer les idées en code et les projets en succès."',
+        '"Apprendre, coder, innover : mon quotidien en informatique."',
+        '"Passionné par l’informatique, motivé par les défis, prêt à innover !"'
+    ];
+} else if (document.getElementById("anglais")) {
+    phrases = [
+        '"Turning ideas into code and projects into success."',
+        '"Learning, coding, innovating: my daily computer science."',
+        '"Passionate about IT, motivated by challenges, ready to innovate ! "'
+    ];
+}
 
 let index = 0;
 
@@ -61,8 +94,10 @@ function textLoad() {
     index = (index + 1) % phrases.length;
 }
 
-textLoad();
-setInterval(textLoad, 7000); // Toutes les 7 secondes
+if (document.querySelector(".auto_text") && window.innerWidth >= 1530) {
+    textLoad();
+    setInterval(textLoad, 7000); // Toutes les 7 secondes
+}
 
 /* Menu A Propos */
 function openCity(evt, cityName) {
@@ -81,3 +116,51 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "inline-block";
     evt.currentTarget.className += " active";
   }
+
+/* Menu Burger */
+const burgerMenu = document.querySelector('nav.affiche');
+const openBtn = document.querySelector('a.open-btn');
+
+if (document.querySelector('a.open-btn')){
+    openBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        burgerMenu.classList.toggle('visible');
+    });
+}
+
+/* Menu Carousel */
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let index_2 = 0;
+
+nextBtn.addEventListener('click', () => {
+    if (index_2 < 4) {  // Adapter selon le nombre d'éléments
+        index_2++;
+        updateCarousel();
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (index_2 > 0) {
+        index_2--;
+        updateCarousel();
+    }
+});
+
+function updateCarousel() {
+    const itemWidth = document.querySelector('.menu-item').offsetWidth + 120;
+    carousel.style.transform = `translateX(${-index_2 * itemWidth}px)`;
+}
+
+/* Version anglais des after de formation */
+if (document.getElementById("anglais")) {
+    const style = document.createElement('style');
+    style.innerHTML = `.margt::after { content: 'Summer 2024' !important; }`;
+    document.head.appendChild(style);
+
+    const style_2 = document.createElement('style');
+    style_2.innerHTML = `.margb::after { content: 'January 2021' !important; }`;
+    document.head.appendChild(style_2);
+}

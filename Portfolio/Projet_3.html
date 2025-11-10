@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+		<meta charset="utf-8">
+		<title>Portfolio | Nathanaël Galat</title>
+        <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Projet_1.css" media="screen" />
+    </head>
+
+    <body>
+        <nav>
+            <button class="back" onclick= "window.location = 'main.html#projets'"><img src = "image/back_2.png"> Accueil </button>
+            <div>
+                <img class = "pp" src="image/logo.png">
+                <h1>Nathanaël Galat</h1>
+            </div>
+            <div>
+                <h2>Mes Autres Projets :</h2>
+                <ul>
+                    <li><a href="Projet_1.html">Jeu De Dames</a></li>
+                    <li><a href="Projet_2.html">Site Alten</a></li>
+                    <li><a href="Projet_4.html">Étude d'accidentologie</a></li>
+                    <li><a href="Projet_5.html">Autres Projets</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="open_dropdown" onclick="toggleMenu()"> 🇫🇷 Français <img src="image/fleche_bas.png"></a>
+                <div class="dropdown_content" id="dropdownMenu">
+                    <a href="EN/Projet_3_EN.html"> 🇬🇧 English</a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="affiche">
+            <ul>
+                <li><a href="Projet_1.html">Jeu De Dames</a></li>
+                <li><a href="Projet_2.html">Site Alten</a></li>
+                <li><a href="Projet_4.html">Étude d'accidentologie</a></li>
+                <li><a href="Projet_5.html">Autres Projets</a></li>
+            </ul>
+        </nav>
+
+        <section class="background_5">
+            <div class="lock">
+                <a href="main.html#projets"><img class = "pp" src="image/logo.png"></a> 
+                <div class="dropdown_2">
+                    <a class="open_dropdown" onclick="toggleMenu_2()"> 🇫🇷 FR <img src="image/fleche_bas.png"></a>
+                    <div class="dropdown_content" id="dropdownMenu_2">
+                        <a href="EN/Projet_3_EN.html"> 🇬🇧 EN</a>
+                    </div>
+                </div>
+                <a href="#menu" class="open-btn"> &#9776 </a>
+            </div>
+
+            <div class="placeholder"></div>
+
+            <h1>Aqua Athletics</h1>
+
+            <div class="principal">
+                <article class="gauche">
+                    <p>En fin de première année de BUT Informatique, nous avons réalisé en équipe un site web (en anglais) simulant celui d’une entreprise proposant des activités nautiques au bord d’un lac. L’objectif était de concevoir une plateforme attractive et fonctionnelle, permettant aux utilisateurs de consulter les activités proposées, obtenir des informations pratiques, et éventuellement simuler une réservation. Ce projet nous a permis d'aborder les différentes étapes de conception d’un site web, du maquettage jusqu’au développement final.</p>
+                </article>
+                <article class="droite">
+                    <p>Ce projet a mobilisé plusieurs compétences acquises durant l’année, notamment en développement web (HTML, CSS, JavaScript), en gestion de projet, et en travail collaboratif. L’un des objectifs principaux était de structurer et répartir efficacement les tâches au sein de l’équipe, tout en assurant une cohérence visuelle et fonctionnelle du site. Cela nous a aussi permis de mettre en pratique des notions de responsive design et d’accessibilité.</p>
+                </article>
+                <article class="gauche">
+                    <p>Nous avons utilisé des outils comme Visual Studio Code pour le développement, Github pour la gestion de version, et Whimsical pour la création des maquettes. Le projet nous a permis d’approfondir notre compréhension des langages du web, d’apprendre à organiser un projet à plusieurs, et de mieux appréhender les enjeux d’une interface utilisateur claire et intuitive. Ce travail d’équipe nous a également aidés à améliorer notre communication et à découvrir des méthodes de collaboration efficaces dans un contexte technique.</p>
+                </article>
+            </div>
+
+            <a href="https://tokachioff.github.io/aqua_athletics/Site%20anglais/main.html" class="button" id="lien" target="_blank"><img src="image/partager.png"> Visite le Site </a>
+        </section>
+
+        <script src = "java.js"></script>
+    </body>
+</html>

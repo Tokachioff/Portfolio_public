@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <title>ALTEN</title>
+  <link rel="shortcut icon" href="./image/logo.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <header>
+    <nav class="burger">
+      <a href="./main.html"><img class = "logo" src="./image/logo.jpg" alt="logo"></a>
+      <a href="#menu" class="open-btn"> &#9776 </a>
+      <ul>
+        <li><button class="button-1" onclick= "window.location = './NosServices.html'">Nos services</button></li>
+        <li><button class="button-1" onclick= "window.location = './TransitionNumEco.html'">Transition Écologique</button></li>
+        <li><button class="button-1" onclick= "window.location = './SecteursActivites.html'">Secteurs d'activités</button></li>
+        <li class="sup"><button class="button-2" onclick= "window.location = './formulaireContact.html'">Nous Contacter</button></li>
+        <a href="#" class="close-btn">x</a>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <section>
+      <img class = "photo_environnement" src="./image/environnement.jpg" alt="img_main">
+      <article class="slogan-container">
+        <p class="slogan">Ingénierie d'innovation, moteur de votre réussite</p>
+        <button class="bouton-2" onclick= "window.location = './TransitionNumEco.html'">en savoir plus</button>
+      </article>
+      <ul>
+        <li><a href="https://www.youtube.com/user/altenfrance"><i class="fa fa-youtube-play"></i></a></li>
+        <li><a href="https://www.instagram.com/alten_group/?hl=fr"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.tiktok.com/@alten_france"><i class="material-icons">tiktok</i></a></li>
+        <li><a href="https://x.com/alten_france"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </section>
+    <section>
+      <h1>Nos agences (françaises)</h1>
+      <div class="tab-container">
+        <a href="#menu" class="open-btn-2"><img src="./image/fleche_droite.png"></a>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Grenoble')">Grenoble</button> 
+            <button class="tablinks" onclick="openCity(event, 'Nice')">Nice</button>
+            <button class="tablinks" onclick="openCity(event, 'Lyon')">Lyon</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+            <button class="tablinks" onclick="openCity(event, 'Lille')">Lille</button>
+            <button class="tablinks" onclick="openCity(event, 'Strasbourg')">Strasbourg</button>
+            <button class="tablinks" onclick="openCity(event, 'Mulhouse')">Mulhouse</button>
+            <button class="tablinks" onclick="openCity(event, 'Bordeaux')">Bordeaux</button>
+            <button class="tablinks" onclick="openCity(event, 'Toulouse')">Toulouse</button>
+            <button class="tablinks" onclick="openCity(event, 'Nantes')">Nantes</button>
+            <button class="tablinks" onclick="openCity(event, 'Rennes')">Rennes</button>
+            <button class="tablinks" onclick="openCity(event, 'Vitrolles')">Vitrolles</button>
+            <a href="#" class="close-btn-2">x</a>
+        </div>
+
+        <div id="Grenoble" class="tabcontent">
+          <h2>Grenoble</h2>
+          <p>Adresse : 34 Rue Gustave Eiffel, 38000 Grenoble</p>
+          <p>04 76 48 87 35</p>
+          <iframe width="425" height="350"
+					src="https://www.openstreetmap.org/export/embed.html?bbox=5.7032101%2C45.1838637%2C5.7032101%2C45.1838637&amp;layer=mapnik&marker=45.1838637%2C5.7032101"
+					class="Map"></iframe> 
+        </div>
+        
+        <div id="Nice" class="tabcontent">
+            <h2>Nice</h2>
+            <p>Adresse : 291 Rue Albert Caquot, 06560 Valbonne</p>
+            <p>04 92 38 31 10</p>
+            <iframe width="425" height="350"
+					  src="https://www.openstreetmap.org/export/embed.html?bbox=7.0567805%2C43.6185833%2C7.0567805%2C43.6185833&amp;layer=mapnik&marker=43.6185833%2C7.0567805"
+					  class="Map"></iframe>
+        </div>
+          
+        <div id="Lyon" class="tabcontent">
+            <h2>Lyon</h2>
+            <p>Adresse : 51 Rue des Docks, 69009 Lyon</p>
+            <p>04 37 44 22 00</p>
+            <iframe width="425" height="350"
+					  src="https://www.openstreetmap.org/export/embed.html?bbox=4.813367%2C45.7889996%2C4.813367%2C45.7889996&amp;layer=mapnik&marker=45.7889996%2C4.813367"
+					  class="Map"></iframe>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <h2>Paris</h2>
+          <p>Adresses :</p>
+          <p>65 Av. Edouard Vaillant, 92100 Boulogne-Billancourt / 01 46 08 70 00</p>
+          <p>40 Av. André Morizet, 92100 Boulogne-Billancourt / 01 46 08 72 00</p>
+          <p>121 Grande Rue 119, 92310 Sèvres / 01 46 08 70 00</p>
+          <p>6 Av. de la Cristallerie, 92310 Sèvres / 01 46 08 70 00</p>
+          <p>221 bis Bd Jean Jaurès, 92100 Boulogne-Billancourt / 01 46 08 76 00</p>
+          <p>Immeuble Le Westminster, 12 Allee Rosa Luxemburg, 95610 Éragny / 01 34 40 10 31</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=2.2218518%2C48.8265289%2C2.2218518%2C48.8265289&amp;layer=mapnik&marker=48.8265289%2C2.2218518"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Lille" class="tabcontent">
+          <h2>Lille</h2>
+          <p>Adresse : Parc Horizon de la, 2 Rue Horus, 59650 Villeneuve-d'Ascq</p>
+          <p>03 20 30 25 25</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=3.1567028%2C50.606436%2C3.1567028%2C50.606436&amp;layer=mapnik&marker=50.606436%2C3.1567028"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Strasbourg" class="tabcontent">
+          <h2>Strasbourg</h2>
+          <p>Adresse : 7 Rue de la Haye Immeuble ATRYA 2, 67300 Schiltigheim</p>
+          <p>03 20 30 25 25</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=7.7102057%2C48.6146991%2C7.7102057%2C48.6146991&amp;layer=mapnik&marker=48.6146991%2C7.7102057"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Mulhouse" class="tabcontent">
+          <h2>Mulhouse</h2>
+          <p>Adresse : 24 Rue Carl Hack, 68100 Mulhouse</p>
+          <p>03 89 42 02 45</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=7.3475571%2C47.7452851%2C7.3475571%2C47.7452851&amp;layer=mapnik&marker=47.7452851%2C7.3475571"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Bordeaux" class="tabcontent">
+          <h2>Bordeaux</h2>
+          <p>Adresse : Domaine De Pelus Hall D2 16 avenue Pythagore 33700 Mérignac</p>
+          <p>05 56 46 88 60</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.6852462%2C44.8318605%2C-0.6852462%2C44.8318605&amp;layer=mapnik&marker=44.8318605%2C-0.6852462"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Toulouse" class="tabcontent">
+          <h2>Toulouse</h2>
+          <p>Adresse : 7 Rue Alain Fournier, 31300 Toulouse</p>
+          <p>05 34 42 73 00</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=1.3697042%2C43.6067083%2C1.3697042%2C43.6067083&amp;layer=mapnik&marker=43.6067083%2C1.3697042"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Nantes" class="tabcontent">
+          <h2>Nantes</h2>
+          <p>Adresse : Bâtiment ARMOR III, 13 Imp. Serge Reggiani, 44800 Saint-Herblain</p>
+          <p>02 51 77 40 50</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6256009%2C47.2317206%2C-1.6256009%2C47.2317206&amp;layer=mapnik&marker=47.2317206%2C-1.6256009"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Rennes" class="tabcontent">
+          <h2>Rennes</h2>
+          <p>Adresse : 12 Rue du Patis Tatelin, 35000 Rennes</p>
+          <p>02 23 35 44 20</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6380076%2C48.1322113%2C-1.6380076%2C48.1322113&amp;layer=mapnik&marker=48.1322113%2C-1.6380076"
+          class="Map"></iframe>
+        </div>
+
+        <div id="Vitrolles" class="tabcontent">
+          <h2>Vitrolles</h2>
+          <p>Adresse : Cap Horizon, 10 Bd Pythagore, 13127 Vitrolles</p>
+          <p>04 42 39 36 35</p>
+          <iframe width="425" height="350"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=5.2333762%2C43.445517%2C5.2333762%2C43.445517&amp;layer=mapnik&marker=43.445517%2C5.2333762"
+          class="Map"></iframe>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src = "./site.js"></script>
+  <footer>
+    <p>Ne manquez pas nos dernières informations :</p>
+    <button class="button-2" onclick= "window.location = './Newsletter.html'">S'abonner</button>
+  </footer>
+</html>

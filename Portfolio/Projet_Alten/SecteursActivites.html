@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+		<meta charset="utf-8">
+		<title>ALTEN</title>
+        <link rel="shortcut icon" href="./image/logo.jpg" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="SecteursActivites.css" media="screen" />
+	</head>
+
+  <header>
+    <nav class="burger">
+      <a href="./main.html">
+        <img class = "logo" src="./image/logo.jpg" alt="logo">
+      </a>
+      <h1> Nos Secteurs d'activités </h1>
+      <a href="#menu" class="open-btn"> &#9776</a>
+      <ul>
+        <li><button class="button-1" onclick= "window.location = './NosServices.html'">Nos services</li>
+        <li><button class="button-1" onclick= "window.location = './TransitionNumEco.html'">Transition Écologique</li>
+        <li class="sup"><button class="button-1" onclick= "window.location = './SecteursActivites.html'">Les secteurs d'activités</li>
+        <li><button class="button-2" onclick= "window.location = './formulaireContact.html'">Nous Contacter</button></li>
+        <a href="#" class="close-btn">x</a>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <div class="tab-container">
+        <a href="#menu" class="open-btn-2"><img src="./image/fleche_droite.png"></a>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Aéronautique')">Aéronautique</button> 
+            <button class="tablinks" onclick="openCity(event, 'Automobile')">Automobile</button>
+            <button class="tablinks" onclick="openCity(event, 'Rail et Mobilité')">Rail et Mobilité</button>
+            <button class="tablinks" onclick="openCity(event, 'Spatial')">Spatial</button>
+            <button class="tablinks" onclick="openCity(event, 'Télécoms')">Télécoms</button>
+            <button class="tablinks" onclick="openCity(event, 'Banque, Finance et Assurance')">Banque, Finance et Assurance</button>
+            <button class="tablinks" onclick="openCity(event, 'Défense, Sécurité & Naval')">Défense, Sécurité & Naval</button>
+            <button class="tablinks" onclick="openCity(event, 'Énergie & Environnement')">Énergie & Environnement</button>
+            <button class="tablinks" onclick="openCity(event, 'Équipement industriel et électronique')">Équipement industriel et électronique</button>
+            <button class="tablinks" onclick="openCity(event, 'Sciences de la vie et santé')">Sciences de la vie et santé</button>
+            <button class="tablinks" onclick="openCity(event, 'Services publics et gouvernement')">Services publics et gouvernement</button>
+            <button class="tablinks" onclick="openCity(event, 'Commerce de détail, services et médias')">Commerce de détail, services et médias</button>
+            <a href="#" class="close-btn-2">x</a>
+        </div>
+        
+        <div id="Aéronautique" class="tabcontent">
+            <h2>Aéronautique</h2>
+            <img src="image/image1.jpg">
+            <p>Accompagne les constructeurs et les équipementiers pour déployer de nouvelles technologies, dans l'ensemble des étapes et des réseaux utilisés par un produit, dès sa fabrication jusqu'à son arrivée au client final. Alten aide également à la mise en place de service client. (assistance client)</p>
+        </div>
+          
+        <div id="Automobile" class="tabcontent">
+            <h2>Automobile</h2>
+            <img src="image/img2.jpg">
+            <p>Dans l'automobile, ALTEN collabore avec les constructeurs pour développer des voitures plus intelligentes et respectueuses de l'environnement. Ils travaillent sur des projets de véhicules électriques, autonomes, et connectés.</p> 
+        </div>
+          
+        <div id="Rail et Mobilité" class="tabcontent">
+            <h2>Rail et Mobilité</h2>
+            <img src="image/img3.jpg">
+            <p>Étant le principal fournisseur d’ingénierie, ils s’impliquent dans les projets sur le matériel roulant, les systèmes de signalisation, les infrastructures, l’expérience client et numérique.</p>
+        </div>
+
+        <div id="Spatial" class="tabcontent">
+          <h2>Spatial</h2>
+          <img src="image/img4.jpeg">
+          <p>Ils accompagnent leurs clients tout au long des études, du développement, de la fabrication, de l’intégration, des tests et des opérations des vaisseaux spatiaux, satellites, mais aussi les segments terrestres etc...</p>
+        </div>
+
+        <div id="Télécoms" class="tabcontent">
+          <h2>Télécoms</h2>
+          <img src="image/img5.jpg">
+          <p>Dans le domaine des télécommunications, ALTEN aide à améliorer les réseaux de communication, comme la 5G, pour offrir une connexion plus rapide et fiable. Ils travaillent avec les opérateurs pour déployer de nouvelles technologies.</p>
+        </div>
+
+        <div id="Banque, Finance et Assurance" class="tabcontent">
+          <h2>Banque, Finance et Assurance</h2>
+          <img src="image/img6.jpg">
+          <p>ALTEN collabore avec les banques et les assurances pour moderniser leurs systèmes informatiques. Ils développent des solutions numériques pour gérer les transactions, assurer la sécurité des données et améliorer l'expérience des clients.</p>
+        </div>
+
+        <div id="Défense, Sécurité & Naval" class="tabcontent">
+          <h2>Défense, Sécurité & Naval</h2>
+          <img src="image/img7.jpg">
+          <p>Ils participent à la conception des navires et des sous-marins, le développement d’avions, ect.. en apportant son expertise dans les systèmes de défense navale.</p>
+        </div>
+
+        <div id="Énergie & Environnement" class="tabcontent">
+          <h2>Énergie & Environnement</h2>
+          <img src="image/img8.jpg">
+          <p>ALTEN est impliqué dans les projets d'énergie renouvelable, comme l'éolien et le solaire, pour produire de l'énergie propre. Ils travaillent également à réduire l'impact environnemental des industries et à améliorer l'efficacité énergétique.</p>
+        </div>
+
+        <div id="Équipement industriel et électronique" class="tabcontent">
+          <h2>Équipement industriel et électronique</h2>
+          <img src="image/img9.jpg">
+          <p>ALTEN travaille avec les fabricants d'équipements industriels pour rendre les machines plus performantes et intelligentes. Ils participent également à l'innovation dans l'électronique, comme les appareils connectés et les systèmes embarqués.</p>
+        </div>
+
+        <div id="Sciences de la vie et santé" class="tabcontent">
+          <h2>Sciences de la vie et santé</h2>
+          <img src="image/img10.jpg">
+          <p>Dans ce secteur, ALTEN aide à développer de nouveaux médicaments, équipements médicaux, et technologies de santé. Leur travail contribue à améliorer les soins médicaux et à rendre les traitements plus accessibles et efficaces.</p>
+        </div>
+
+        <div id="Services publics et gouvernement" class="tabcontent">
+          <h2>Services publics et gouvernement</h2>
+          <img src="image/img11.jpg">
+          <p>Dans ce secteur, ALTEN aide les gouvernements et les services publics à moderniser leurs systèmes pour mieux gérer les services aux citoyens, comme les transports, la santé, ou la sécurité. Ils développent des solutions numériques pour rendre les services publics plus efficaces.</p>
+        </div>
+
+        <div id="Commerce de détail, services et médias" class="tabcontent">
+          <h2>Commerce de détail, services et médias</h2>
+          <img src="image/img12.jpg">
+          <p>ALTEN soutient les entreprises de commerce et de médias en développant des solutions numériques pour améliorer les services en ligne, les applications mobiles, et les plateformes de contenu. Cela permet d'offrir une meilleure expérience utilisateur.</p>
+        </div>
+    </div>
+    <script src = "site.js"></script>
+  </body>
+  <footer>
+    <p>Ne manquez pas nos dernières informations :</p>
+    <button class="button-2" onclick= "window.location = './Newsletter.html'">S'abonner</button>
+  </footer>
+</html>

@@ -242,7 +242,7 @@ height: 416px;
 /* FOOTER */
 footer {
   display: flex !important;
-  position: fixed;
+
   background-color: #1A4474;
   bottom: 0;
   width: 100%;

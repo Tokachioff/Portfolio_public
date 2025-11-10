@@ -11,17 +11,18 @@
 
     <body>
         <nav>
-            <button class="back" onclick="goBack()"><img src = "../image/back.png"></button>
+            <button class="back" onclick= "window.location = 'main_EN.html#projets'"><img src = "../image/back_2.png"> Home </button>
             <div>
-                <img class = "pp" src="../image/pp.png" alt="photo de profil">
+                <img class = "pp" src="../image/logo.png">
                 <h1>Nathanaël Galat</h1>
             </div>
             <div>
                 <h2>My Other Projects:</h2>
                 <ul>
-                    <li><a href="#">Algo Ranking</a></li>
-                    <li><a href="#">Alten Site</a></li>
-                    <li><a href="#">Twine</a></li>
+                    <li><a href="Projet_2_EN.html">Alten Site</a></li>
+                    <li><a href="Projet_3_EN.html">Aqua Athletics</a></li>
+                    <li><a href="Projet_4_EN.html">Accident Study</a></li>
+                    <li><a href="Projet_5_EN.html">Other Projects</a></li>
                 </ul>
             </div>
             <div class="dropdown">
@@ -32,9 +33,32 @@
             </div>
         </nav>
 
+        <nav class="affiche">
+            <ul>
+                <li><a href="Projet_2_EN.html">Alten Site</a></li>
+                <li><a href="Projet_3_EN.html">Aqua Athletics</a></li>
+                <li><a href="Projet_4_EN.html">Accident Study</a></li>
+                <li><a href="Projet_5_EN.html">Other Projects</a></li>
+            </ul>
+        </nav>
+
         <section>
+            <div class="lock">
+                <a href="../main.html#projets"><img class = "pp" src="../image/logo.png"></a> 
+                <div class="dropdown_2">
+                    <a class="open_dropdown" onclick="toggleMenu_2()"> 🇬🇧 EN <img src="../image/fleche_bas.png"></a>
+                    <div class="dropdown_content" id="dropdownMenu_2">
+                        <a href="../Projet_1.html"> 🇫🇷 FR</a>
+                    </div>
+                </div>
+                <a href="#menu" class="open-btn"> &#9776 </a>
+            </div>
+
+            <div class="placeholder"></div>
+
             <img src="../image/Designer.jpeg" alt="background">
             <h1>Checkers Game</h1>
+
             <div class="principal">
                 <article class="gauche">
                     <p>In 2023, I realized a personal project consisting of the creation of a checkers game in Python using the Tkinter library for the graphical interface. This project aimed to develop a functional game with an intuitive interface, allowing two players to compete on a board of 64 boxes, respecting the official rules of the checkers game. Working alone on this project, I had to organize my work independently, planning the different stages of development: design of game logic, implementation of rules, management of moves and captures, as well as the dynamic display of the board.</p>
@@ -46,8 +70,10 @@
                     <p>I also created a ZIP file containing the game as an executable (.exe), which allows it to run easily without having to install Python or Tkinter. You can download the file below to test the game directly on your computer.</p>
                 </article>
             </div>
+
             <a href="../jeu_de_dames.zip" class="button"><img src="../image/telecharger.png"> Download Game </a>
         </section>
+
         <script src = "../java.js"></script>
     </body>
 </html>

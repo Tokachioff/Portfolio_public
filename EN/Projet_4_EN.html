@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		<meta charset="utf-8">
+        <title>Portfolio | Nathanaël Galat</title>
+        <link rel="shortcut icon" href="../image/logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Projet_1.css" media="screen" />
+    </head>
+
+    <body>
+        <nav>
+            <button class="back" onclick= "window.location = 'main_EN.html#projets'"><img src = "../image/back_2.png"> Home </button>
+            <div>
+                <img class = "pp" src="../image/logo.png">
+                <h1>Nathanaël Galat</h1>
+            </div>
+            <div>
+                <h2>My Other Projects:</h2>
+                <ul>
+                    <li><a href="Projet_1_EN.html">Checkers Game</a></li>
+                    <li><a href="Projet_2_EN.html">Alten Site</a></li>
+                    <li><a href="Projet_3_EN.html">Aqua Athletics</a></li>
+                    <li><a href="Projet_5_EN.html">Other Projects</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="open_dropdown" onclick="toggleMenu()"> 🇬🇧 English <img src="../image/fleche_bas.png"></a>
+                <div class="dropdown_content" id="dropdownMenu">
+                    <a href="../Projet_4.html"> 🇫🇷 Français</a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="affiche">
+            <ul>
+                <li><a href="Projet_1_EN.html">Checkers Game</a></li>
+                <li><a href="Projet_2_EN.html">Alten Site</a></li>
+                <li><a href="Projet_3_EN.html">Aqua Athletics</a></li>
+                <li><a href="Projet_5_EN.html">Other Projects</a></li>
+            </ul>
+        </nav>
+
+        <section class="background_3">
+            <div class="lock">
+                <a href="../main.html#projets"><img class = "pp" src="../image/logo.png"></a> 
+                <div class="dropdown_2">
+                    <a class="open_dropdown" onclick="toggleMenu_2()"> 🇬🇧 EN <img src="../image/fleche_bas.png"></a>
+                    <div class="dropdown_content" id="dropdownMenu_2">
+                        <a href="../Projet_4.html"> 🇫🇷 FR</a>
+                    </div>
+                </div>
+                <a href="#menu" class="open-btn"> &#9776 </a>
+            </div>
+
+            <div class="placeholder"></div>
+
+            <img src="../image/Designer.jpeg" alt="background">
+            <h1>Accident Study</h1>
+
+            <div class="principal">
+                <article class="gauche">
+                    <p>At the end of my first year of a BUT in Computer Science, I carried out a project on my own to analyze data on road accidents among young people aged 18 to 25, in the Provence-Alpes-Côte d'Azur region, between 2006 and 2023. The work consisted of using government Open Data to produce a synthetic and informative document.</p>
+                </article>
+                <article class="droite">
+                    <p>The project allowed me to leverage my skills in data processing, statistical analysis, and visualization. The goal was to identify trends in accidents involving young people by cross-referencing several variables such as severity, causes, and traffic conditions. Working alone helped me gain autonomy and rigor.</p>
+                </article>
+                <article class="gauche">
+                    <p>I first used SQL to extract and clean data from the database. Then, I worked with RStudio to analyze the data and produce clear and relevant graphs. This project allowed me to strengthen my skills in data manipulation, statistical analysis, and visual communication of results.</p>
+                </article>
+            </div>
+
+            <a href="../Etude_Accident.pdf" class="button" id="lien" target="_blank"><img src="../image/telecharger.png"> Download the PDF </a>
+        </section>
+
+        <script src = "../java.js"></script>
+    </body>
+</html>

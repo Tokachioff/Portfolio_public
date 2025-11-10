@@ -1,0 +1,41 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdf7f0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: end;
+    margin: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: large;
+    background-color: #FFFFFF;
+}
+
+section {
+    width: 100%;
+    margin: 5px;
+}
+
+button {   
+    margin: 10px;
+    height: 80%;
+    width: 20%;
+}
+
+.last {
+    text-align: center;
+}
+
+input:invalid:not(:placeholder-shown) {
+    background-color: pink;
+}
