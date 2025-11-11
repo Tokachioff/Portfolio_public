@@ -216,7 +216,6 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: fit-content;
 }
 
 #bio section {
@@ -854,7 +853,7 @@ footer p {
     }
 
     .dropdown_2 .dropdown_content {
-        top: 3.75vh;
+        top: 3.6vh;
     }
 
     .dropdown_2 .dropdown_content a {
@@ -939,6 +938,10 @@ footer p {
         margin-top: 10%;
     }
 
+    #bio {
+        min-height: fit-content;
+    }
+
     /* FORMATION */
     #formation h2 {
         display: none;
@@ -975,8 +978,9 @@ footer p {
         font-size: 1.2vh;
     }
 
-    .margb {
-        margin-top: 160px !important;
+    #formation section {
+        text-wrap: nowrap;
+        min-width: fit-content;
     }
 
     #formation div:last-child section::after {
@@ -988,7 +992,7 @@ footer p {
     }
 
     #formation div:first-child section:nth-child(3)::after {
-        translate: 86% -150%;
+        translate: 86% -140%;
     }
 
     /*PROJET*/
