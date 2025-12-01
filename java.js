@@ -108,24 +108,6 @@ if (document.querySelector(".auto_text") && window.innerWidth >= 1530) {
     setInterval(textLoad, 7000); // Toutes les 7 secondes
 }
 
-/* Menu A Propos */
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-  
-    tabcontent = document.getElementsByClassName("tab_content");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    document.getElementById(cityName).style.display = "inline-block";
-    evt.currentTarget.className += " active";
-  }
-
 /* Menu Burger */
 const burgerMenu = document.querySelector('nav.affiche');
 const openBtn = document.querySelector('a.open-btn');
@@ -141,35 +123,87 @@ if (document.querySelector('a.open-btn')){
 const carousel = document.querySelector('.carousel');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const firstCard = document.querySelector(".menu-item");
+const carouselChildrens = [...carousel.children];
 
-let index_2 = 0;
+let cardPerView = Math.round(carousel.offsetWidth / firstCard);
+
+let cardWidth, gap;
+
+/*
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+})
+
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+})
+*/
+function updateMeasurements() {
+  cardWidth = firstCard.getBoundingClientRect().width;
+  gap = parseFloat(getComputedStyle(carousel).gap);
+}
+
+window.addEventListener('load', updateMeasurements);
+window.addEventListener('resize', updateMeasurements);
 
 nextBtn.addEventListener('click', () => {
-    if (index_2 < 4) {  // Adapter selon le nombre d'éléments
-        index_2++;
-        updateCarousel();
-    }
+  carousel.scrollBy({ left: cardWidth + gap });
 });
 
 prevBtn.addEventListener('click', () => {
-    if (index_2 > 0) {
-        index_2--;
-        updateCarousel();
-    }
+  carousel.scrollBy({ left: - (cardWidth + gap)});
 });
 
-function updateCarousel() {
-    const itemWidth = document.querySelector('.menu-item').offsetWidth + 120;
-    carousel.style.transform = `translateX(${-index_2 * itemWidth}px)`;
+const infiniteScroll = () => {
+    if (carousel.scrollLeft == 0) {
+        /*
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth -(2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+        */
+       prevBtn.style.visibility = "hidden";
+    } else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+        /*
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+        */
+        nextBtn.style.visibility = "hidden";
+    } else {
+        nextBtn.style.visibility = "visible";
+        prevBtn.style.visibility = "visible";
+    }
 }
+
+carousel.addEventListener("scroll", infiniteScroll);
 
 /* Version anglais des after de formation */
 if (document.getElementById("anglais")) {
     const style = document.createElement('style');
-    style.innerHTML = `.margt::after { content: 'Summer 2024' !important; }`;
+    style.innerHTML = `#bio part div:last-child section::after { content: 'Summer 2024' !important; }`;
     document.head.appendChild(style);
 
     const style_2 = document.createElement('style');
-    style_2.innerHTML = `.margb::after { content: 'January 2021' !important; }`;
+    style_2.innerHTML = `#bio part div:first-child section:last-child::after { content: 'January 2021' !important; }`;
     document.head.appendChild(style_2);
+}
+
+const modalContainer = document.querySelector(".modal-container");
+const modalTrigger = document.querySelector(".modal-overlay");
+const modals = document.querySelectorAll(".modal");
+
+modalTrigger.addEventListener("click", closeModal);
+
+function openModal(nom) {
+    modalContainer.classList.toggle("active");
+    document.documentElement.style.overflowY = "hidden";
+    modals.forEach(modal => modal.style.visibility = "hidden")
+    nom.style.visibility = "visible";
+}
+
+function closeModal() {
+    modalContainer.classList.toggle("active");
+    document.documentElement.style.overflowY = "visible";
+    modals.forEach(modal => modal.style.visibility = "hidden")
 }

@@ -6,13 +6,13 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
-    font-family: Lato, Arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     overflow-x: hidden;
 }
 
 /* Barre de navigation */
 header {
-    height: 6vh;
+    height: 60px;
 }
 
 header nav {
@@ -21,7 +21,7 @@ header nav {
     align-items: center;
     background-color: #2c3e50;
     position: fixed;
-    height: 6vh;
+    height: 60px;
     z-index: 1000;
 }
 
@@ -115,9 +115,9 @@ main {
 }
 
 article {
-    min-height: 94vh;
+    min-height: calc(100dvh - 60px);
     width: 100%;
-    scroll-margin-top: 6vh;
+    scroll-margin-top: 60px;
 }
 
 .contenu {
@@ -126,15 +126,14 @@ article {
     width: 100%;
 }
 
-#contact h2, #projets h2, #bio h2,#formation h2 {
+#contact h2, #projets h2, #bio h2,#competence h2 {
     font-size: xx-large;
     font-style: italic;
 }
 
-#formation, #contact, #accueil {
+#competence, #contact, #accueil {
     background-color: #f0f0f0;
 }
-
 
 /* ----------------------------------------------------------------- ACCUEIL ----------------------------------------------------------------- */
 #accueil {
@@ -207,30 +206,22 @@ article {
 
 
 
-
-
-
-
 /* ----------------------------------------------------------------- A PROPOS ----------------------------------------------------------------- */
 #bio {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-#bio section {
-    height: 60%;
+#bio .perso {
     width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #e6e6e6;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-#bio section:last-child {
-    margin-bottom: 50px;
-    height: 35vh;
+    border-radius: 20px;
 }
 
 #bio .pp {
@@ -246,113 +237,69 @@ article {
     align-content: center;
 }
 
-#bio div {
+#bio .perso div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#bio div img {
+#bio .perso div img {
     width: 150px;
     height: 100px;
     border-radius: 10px;
 }
 
-#bio section:last-child img {
-    height: 12vh;
-    margin-bottom: 5px;
-}
-
-#bio section:last-child a {
-    display: flex;
-    flex-direction: column;
-    color: black;
-    text-decoration: none;
-    transition: transform .2s;
-}
-
-#bio section:last-child a:hover {
-    transform: scale(1.2);
-}
-
 #bio part {
-display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-
-/* ----------------------------------------------------------------- FORMATION ----------------------------------------------------------------- */
-#formation {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-#formation .formation_tel {
-    display: none;
+    flex-direction: column;
+    min-height: 400px;
+    margin-bottom: 20px;
 }
 
 .timebar {
-    height: 60vh;
-    width: 8px;
+    height: 10px;
+    width: 60vw;
     background-color: black;
-    margin-top: 90px;
+    margin: 60px;
 }
 
-#formation div {
+#bio part div {
     display: flex;
-    flex-direction: column;
-    width: 350px;
+    width: 80vw;
+    justify-content: space-evenly;
+    align-items: end;
 }
 
-#formation section{
-    padding: 2%;
-    margin-top: 120px;
+#bio part section{
+    padding: 1%;
+    margin: 0;
     border-radius: 15px;
     background-color: #A2D2FF;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    position: relative;
 }
 
-#formation div:first-child section {
+#bio part div:first-child section {
     background-color: #B7E4C7;
 }
 
-#formation div:last-child h2{
-    white-space: nowrap;
-    position: relative;
-    right: 40px;
-    bottom: 118px;
-}
-
-.margb {
-    margin-top: 145px !important;
-}
-
-#formation h2 {
-    margin-bottom: 0;
-}
-
-#formation h3 {
+#bio part h3 {
+    margin-top: 0;
     margin-bottom: 5%;
     font-size: 150%;
-    margin-top: 5%;
 }
 
-#formation h4 {
+#bio part h4 {
     margin-top: 1%;
     margin-bottom: 1%;
 }
 
-#formation div:first-child{
-    margin-left: 10%;
-}
-
-#formation div:last-child{
-    margin-right: 10%;
-}
 
 /* BEFORE */
-#formation div:first-child section::before {
+#bio part div:first-child section::before {
     content: "";
     border: 2px solid green;
     height: 50px;
@@ -362,15 +309,11 @@ display: flex;
     background-size: cover; /* Ajuste l'image */
     background-position: center;
     border-radius: 30px;
-    translate: -50% 50%;
+    translate: -50% 306.5%;
     left: 50%;
 }
 
-#formation div:first-child section:nth-child(3)::before {
-    translate: -50% 75%;
-}
-
-#formation div:last-child section::before {
+#bio part div:last-child section::before {
     content: "";
     border: 2px solid blue;
     height: 50px;
@@ -380,9 +323,11 @@ display: flex;
     background-size: cover; /* Ajuste l'image */
     background-position: center;
     border-radius: 30px;
-    translate: -50% 50%;
-    left: 50%;
+    translate: 0 -208%;
+    left: 40%;
 }
+
+#bio part div:first-child section:last-child:before {translate: -50% 260.5%;}
 
 /* AFTER */
 .timebar::after {
@@ -390,87 +335,153 @@ display: flex;
     height: 50px;
     width: 50px;
     position: absolute;
-    translate: -50% -39%;
+    translate: -60% -39%;
     background-image: url(./image/fleche-vers-le-haut.png);
     background-size: cover;
-    background-position: center
+    background-position: center;
+    rotate: 90deg;
+    left:80%;
 }
 
-#formation div:last-child section::after {
+#bio part div:last-child section::after {
     content: "";
     height: 50px;
     width: 170px;
     position: absolute;
-    translate: -40% -160%;
-    left: 55%;
+    translate: -50% -290%;
+    left: 50%;
     font-size: x-large;
     align-content: center;
 }
 
-#formation div:first-child section::after {
+#bio part div:first-child section::after {
     content: "";
     height: 50px;
     width: 170px;
     position: absolute;
-    translate: -50% -160%;
-    left: 44%;
+    translate: -50% 30%;
+    left: 50%;
     font-size: x-large;
     align-content: center;
 }
 
-#formation div:first-child section:nth-child(2)::after {content: "2024 - 2026";}
-#formation div:first-child section:nth-child(3)::after {content: "2021 - 2024"; translate: -50% -181%;}
-#formation div:first-child section:nth-child(4)::after {content: "2017 - 2021";}
-#formation div:last-child section:nth-child(3)::after {content: "Été 2024";}
-#formation div:last-child section:last-child::after {content: "Janvier 2021";}
+#bio part div:first-child section:nth-child(2)::after {content: "2024 - Présent";}
+#bio part div:first-child section:first-child::after {content: "2021 - 2024";}
+#bio part div:last-child section::after {content: "Été 2024";}
 
 
+/* ----------------------------------------------------------------- COMPETENCE ----------------------------------------------------------------- */
+#competence {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+#competence section {
+    margin-bottom: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#competence section img {
+    height: 10vh;
+    margin-bottom: 5px;
+    min-height: 70px;
+}
+
+#competence section:last-child a {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+#competence section:last-child a:hover {
+    transform: scale(1.2);
+}
+
+#competence part {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+}
+
+#competence part section {
+    margin: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 35vh;
+    width: 16vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 230px;
+}
+
+#competence part section h3 {
+    font-size: 1.1vw;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
 /* ----------------------------------------------------------------- PROJETS ----------------------------------------------------------------- */
 
 .carousel-container {
     display: flex;
     align-items: center;
-    position: relative;
     height: 90%;
-    justify-content: center;
+    padding-bottom: 5%;
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    z-index: 5;
+.carousel-container .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% /3) - 8%);
+    gap: 12%;
+    
+    align-items: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    scroll-behavior: smooth;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
-.visible_2 {
-    overflow: hidden;
-    height: 80%;
-    display: flex;
-    max-width: 1200px;
-    min-width: 300px;
+.carousel.no-transition {
+    scroll-behavior: auto;
 }
 
 .menu-item {
-    width: 500px;
+    scroll-snap-align: start;
     padding: 15px;
     background: #e6e6e6;
     border-radius: 20px;
-    margin: 20px 60px;
-    justify-content: start;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    min-height: fit-content;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.menu-item:first-child {
-    margin-left: 330px;
+.menu-item .image_projet {
+    align-content: center;
+    min-height: 300px;
 }
 
 .menu-item img {
-    width: 50%;
+    width: 40%;
     height: auto;
-    border: 4px solid black;
+    border: 4px solid #606060;
 }
 
 .menu-item:last-child img {
@@ -482,9 +493,9 @@ display: flex;
 }
 
 .menu-item h3 {
-    font-size: xx-large;
-    font-style: italic;
-    text-decoration: underline;
+    font-size: 2rem;
+    margin: 16px 0;
+    color: #333;
 }
 
 .menu-item p {
@@ -495,16 +506,25 @@ display: flex;
 }
 
 .menu-item a {
-    text-decoration:none;
-    color: black;
-    border:2px solid black;
-    padding:10px;
-    font-size: 1.1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: large;
 }
 
 .menu-item a:hover {
-    color: #D32F2F;
+  background-color: #0056b3;
 }
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
 
 button {
     background-color: white;
@@ -525,18 +545,124 @@ button:hover {
     transform: scale(1.5,1.5);
 }
 
-.language {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+#prevBtn {
+    visibility: hidden;
 }
 
-.language p:first-child {border-color: #007FFF;}
-.language p:nth-child(2) {border-color: #FF2400;}
-.language p:last-child {border-color: #FFC107;}
-.menu-item:nth-child(4) .language p {border-color: #00758F;} 
-.menu-item:last-child .language p {border-color: #6A1E9C  ;} 
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100dvw;
+    /*min-height: 2000px;*/
+    z-index: 2000;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
+.modal-container.active {
+    display: block;
+}
+
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+}
+
+.modal {
+    background: #fff;
+    width: fit-content;
+    position: absolute;
+    transform: translate(-50%, 5%);
+    top: 0%;
+    left: 50%;
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 300px;
+    margin-top: 5%;
+    visibility: visible;    
+
+}
+
+/* ----------------------------------------------------------------- Projet Jeu de Dames ----------------------------------------------------------------- */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  border-left: 3px solid #007bff33;
+}
+
+.step {
+  margin-bottom: 40px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #007bff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #007bff33;
+}
+
+.step h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+.step p {
+  background: #f7f7f7;
+  padding: 18px 22px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  line-height: 1.6;
+  color: #444;
+}
+
+
+/* BOUTON */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #007bff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 40px auto;
+  display: flex;
+  transition: 0.3s;
+  max-width: fit-content;
+}
+
+.download-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.download-btn:hover {
+  background: #005fcc;
+  transform: translateY(-2px);
+}
 
 /* ----------------------------------------------------------------- CONTACT ----------------------------------------------------------------- */
 .contactpart{
@@ -551,7 +677,7 @@ button:hover {
 }
 
 #contact {
-    min-height: 90vh;
+    min-height: calc(100dvh - 60px - 45px);
 }
 
 #contact > p{
@@ -618,7 +744,6 @@ input:invalid:not(:placeholder-shown) {
     flex-direction: column;
     width: 25%;
     justify-content: space-evenly;
-    height: 60vh;
 }
 
 .reseaux div {
@@ -639,6 +764,7 @@ input:invalid:not(:placeholder-shown) {
     padding: 5px;
     color: black;
     height: 5vh;
+    min-height: 50px;
 }
 
 input::placeholder, .formulaire h3 {
@@ -655,7 +781,7 @@ input::placeholder, .formulaire h3 {
 }
 
 footer {
-    height: 4vh;
+    height: 45px;
     background-color: #2c3e50;
     color: white;
     align-content: center;
@@ -667,25 +793,6 @@ footer p {
 
 
 /* ----------------------------------------------------------------- MODE TEL ----------------------------------------------------------------- */
-@media screen and (max-width: 1750px) {
-    /* FORMATION */
-    #formation div:last-child section::after {
-        translate: -170% -160%;
-    }
-    #formation div:first-child section::after {
-        translate: 86% -160%;
-    }
-    #formation div:first-child section:nth-child(3)::after {
-        translate: 86% -181%;
-    }
-}
-
-
-
-
-
-
-
 @media screen and (max-width: 1530px) {
     /* ACCUEIL */
     .titre_principale {
@@ -696,22 +803,7 @@ footer p {
         white-space: wrap;
         width: auto !important;
     }
-
-    /*PROJET*/
-    .carousel {
-        height: fit-content;
-      }
-      
-    .menu-item:first-child {
-        margin-left: 23vw;
-    }
-
-    .menu-item {
-        width: 26vw;
-    }
 }
-
-
 
 
 
@@ -722,73 +814,57 @@ footer p {
         flex-direction: column;
         justify-content: space-evenly;
     }
-    #bio .pp {
+    #bio .perso .pp {
         height: 20%;
     }
-    #bio p:nth-child(2) {
+    #bio .perso p:nth-child(2) {
         max-width: 75%;
         height: fit-content;
         font-size: medium;
         margin: 0;
     }
 
-    #bio part {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #bio section:last-child {
+    #bio .perso section:last-child {
         width: 80%;
         padding-bottom: 2vh;
         padding-top: 2vh;
         height: fit-content;
     }
 
-    #bio h3 {
+    #bio .perso h3 {
         margin-top: 0;
     }
 
-    #bio section:last-child img {
-    height: 8vh;
+    #bio .perso section:last-child img {
+        height: 8vh;
+    }
+    
+    /* COMPETENCE */
+    #competence section {
+        flex-direction: column;
+        height: fit-content;
+        padding: 2%;
     }
 
-    /*FORMATION*/
-    #formation div:last-child h2 {
-        right: 10%;
+    #competence part {
+        padding-bottom: 1.5%;
+        padding-top: 1.5%;
+    }
+
+    #competence part section h3 {
+        margin: 0;
+        font-size: larger;
     }
 
     /*PROJET*/
-    button {
-        position: relative;
-        top: 33%;
-    }
-      
-    #nextBtn {
-        right: 30%;
-    }
-      
-    #prevBtn {
-        left: 30%;
+    .carousel-container .carousel {
+        grid-auto-columns: calc((100%/2) - 6%);
     }
 }
 
 
 
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1050px) {
-    /* FORMATION */
-    #formation div {
-        margin: 0 !important;
-    }
-
     /* CONTACT */
     .reseaux div {
         height: 66px;
@@ -798,20 +874,7 @@ footer p {
     .reseaux {
         width: auto;
     }
-
-    /* PROJET */
-    .menu-item:first-child {
-        margin-left: 21vw;
-    }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -820,19 +883,20 @@ footer p {
 @media screen and (max-width: 768px) {
 
     article {
-        scroll-margin-top: 8vh;
+        scroll-margin-top: 70px;
+        min-height: 100dvh;
     }
 
     /*MENU*/
     .lock {
         display: flex !important;
         justify-content: space-between;
-        z-index: 5000;
+        z-index: 1000;
         background-color: #2c3e50;
         position: fixed;
         width: 100%;
         align-items: center;
-        height: 8vh;
+        height: 70px;
     }
 
     header {
@@ -853,7 +917,7 @@ footer p {
     }
 
     .dropdown_2 .dropdown_content {
-        top: 3.6vh;
+        top: 35px;
     }
 
     .dropdown_2 .dropdown_content a {
@@ -929,11 +993,11 @@ footer p {
     }
 
     nav.affiche.visible {
-        transform: translateY(4vh);
+        transform: translateY(30px);
     }
 
     /* A PROPOS */
-    #bio section:last-child a{
+    #bio .perso section:last-child a{
         height: 10%;
         margin-top: 10%;
     }
@@ -942,83 +1006,85 @@ footer p {
         min-height: fit-content;
     }
 
-    /* FORMATION */
-    #formation h2 {
+    #bio part {
+        width: 100%;
+    }
+
+    #bio part section {
+        width: 50vw;
+    }
+
+    #bio part div {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+    }
+
+    #bio part div:first-child {
+        height: 100%;
+    }
+
+    #bio part div section::before, .timebar, .timebar::after {
         display: none;
     }
 
-    #formation .formation_tel {
-        display: block !important;
-        right: 20vw !important;
+    #bio h3 {
+        font-size: large !important;
     }
 
-    #formation div {
-        width: max-content;
-        position: relative;
+    #bio h4 {
+        font-size: smaller;
     }
 
-    #formation div:last-child {
-        right: 2%;
-        padding-bottom: 5vh;
+    #bio h2:last-child {
+        margin-bottom: 2%;
     }
 
-    #formation .timebar, .timebar::after {
-        display: none;
+    #bio part div:first-child section::after {
+        translate: -50% -100%;
+        top: 10%;
     }
 
-    #formation div:first-child section::before, #formation div:last-child section::before {
-        content: none;
+    #bio part div:last-child section::after {
+        translate: -50% -50%;
+        top: -15%;
     }
 
-    #formation h3 {
-        font-size: 2vh;
+    /* COMPETENCE */
+    #competence {
+        min-height: fit-content;
+    }
+    
+    #competence part {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #formation h4 {
-        font-size: 1.2vh;
+    #competence .competence_technique {
+        flex-direction: row;
+        margin-top: 5%;
     }
 
-    #formation section {
-        text-wrap: nowrap;
-        min-width: fit-content;
+    #competence section img {
+        width: fit-content;
+        align-self: center;
     }
 
-    #formation div:last-child section::after {
-        translate: -185% -125%;
+    #competence section:last-child a {
+        margin: 10%;
     }
 
-    #formation div:first-child section::after {
-        translate: 85% -125%;
+    #competence part section {
+        width: fit-content;
+        margin-top: 5%;
+        font-size: larger;
+        margin-bottom: 5%;
+        height: 20vh;
     }
 
-    #formation div:first-child section:nth-child(3)::after {
-        translate: 86% -140%;
-    }
-
-    /*PROJET*/
-    #projets {
-        min-height: 14%;
-    }
-
-    .menu-item {
-        width: 35vw;
-        margin-top: 0;
-    }
-
-    .menu-item p {
-        margin: revert;
-    }
-      
-    .menu-item:first-child {
-        margin-left: 5vw;
-    }
-
-    button {
-        top: 36%;
-    }
-
-    button:hover {
-    transform: scale(1.3,1.3);
+    /*PROJETS*/
+    .carousel-container .carousel {
+        grid-auto-columns: 100%;
     }
 
     /*CONTACT*/
@@ -1051,80 +1117,4 @@ footer p {
     #contact > p {
         font-size: initial;
     }
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 449px) {
-    #formation .formation_tel {
-        right: 35% !important;
-    }
-
-    #formation div:last-child section::after {
-        translate: -150% -140%;
-    }
-
-    #formation div:first-child section::after {
-        translate: 25vw -150%;
-    }
-
-    #formation div:first-child section:nth-child(3)::after {
-        translate: 25vw -190%;
-    }
-
-    #formation section:nth-child(3) {
-        margin-top: 80%;
-    }
-
-    #formation section:last-child {
-        margin-top: 85%;
-    }
-
-    #formation .margb {
-        margin-top: 115% !important;
-    }
-
-    #formation .margt {
-        margin-top: 175% !important;
-    }
-
-    #formation section {
-        font-size: small;
-        width: 150px;
-        min-height: 100px;
-        align-content: center;
-    }
-
-    #formation div {
-        margin-top: 15% !important;
-    }
-
-    #formation div:last-child h2 {
-        margin: 0;
-    }
-
-    /*PROJET*/
-    .menu-item {
-        width: 65vw;
-    }
-}    
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 300px) {
-    #formation .formation_tel {
-        right: 30% !important;
-    }
-
 }

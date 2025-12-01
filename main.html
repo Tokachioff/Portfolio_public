@@ -7,6 +7,10 @@
         <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css" media="screen" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -15,14 +19,14 @@
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#bio">A Propos</a></li>
-                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#competence">Compétences</a></li>
                     <li><a href="#projets">Projets</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="dropdown">
                     <a class="open_dropdown" onclick="toggleMenu()"> 🇫🇷 Français <img src="image/fleche_bas.png"></a>
                     <div class="dropdown_content" id="dropdownMenu">
-                        <a href="EN/main_EN.html"> 🇬🇧 English</a>
+                        <a href="main_EN.html"> 🇬🇧 English</a>
                     </div>
                 </div>
             </nav>
@@ -31,7 +35,7 @@
         <nav class="affiche">
             <ul>
                 <li><a href="#bio">A Propos</a></li>
-                <li><a href="#formation">Formation</a></li>
+                <li><a href="#competence">Compétences</a></li>
             </ul>
             <ul>
                 <li><a href="#projets">Projets</a></li>
@@ -45,7 +49,7 @@
                 <div class="dropdown_2">
                     <a class="open_dropdown" onclick="toggleMenu_2()"> 🇫🇷 FR <img src="image/fleche_bas.png"></a>
                     <div class="dropdown_content" id="dropdownMenu_2">
-                        <a href="EN/main_EN.html"> 🇬🇧 EN</a>
+                        <a href="main_EN.html"> 🇬🇧 EN</a>
                     </div>
                 </div>
                 <a href="#menu" class="open-btn"> &#9776 </a>
@@ -60,19 +64,65 @@
                 </article>
                 <article id="bio">
                     <h2>A Propos De Moi </h2>
-                    <section>
+                    <section class="perso">
                         <img src="image/pp.png" class="pp">
-                        <p>Étudiant en deuxième année de BUT Informatique à l'IUT 2 de Grenoble, je suis passionné par le développement et la conception d’applications. Curieux et motivé, j’acquiers des compétences solides en programmation et en résolution de problèmes informatiques. À l’aise avec différents langages et technologies, je cherche à approfondir mes connaissances tout en mettant en pratique mes acquis à travers des projets concrets. Rigoureux et autonome, j’aime relever des défis techniques et collaborer en équipe pour développer des solutions efficaces et innovantes.</p>
+                        <p>Étudiant en deuxième année de BUT Informatique à l’IUT 2 de Grenoble, je m’intéresse particulièrement au développement d’applications et aux outils qui améliorent l’efficacité d’un projet. 
+                            J’aime comprendre comment les choses fonctionnent et résoudre des problèmes techniques de façon structurée. <strong font-> Organisé, persévérant et réactif</strong>, 
+                            je progresse chaque jour en programmation grâce aux projets que je réalise. J’apprécie le travail d’équipe, la communication claire et le partage de connaissances, tout en étant capable d’avancer de manière autonome lorsque c’est nécessaire.
+                        </p>
                         <div>
-                            <h3>Langues </h3>
-                            <img src="image/france.jpg" alt="drapeau_français">
-                            <p>Langue maternelle</p>
+                            <h3>Langues Maitrisées</h3>
                             <img src="image/anglais.png" alt="drapeau_anglais">
                             <p>Niveau A2</p>
+                            <img src="image/drapeau-espagnol.png" alt="drapeau_espagnol">
+                            <p>Niveau A1</p>
                         </div>
                     </section>
+                    <h2>Mon Parcours</h2>
+                    <part>
+                        <div>
+                            <section>
+                                <h3>Baccalauréat Général</h3>
+                                <h4>Spécialités: NSI/Maths</h4>
+                                <h4>Diplomé avec mention assez bien</h4>
+                                <h4>Lycée Louis Modeste Leroy, Evreux (27)</h4>
+                            </section>
+                            <section>
+                                <h3>BUT Informatique</h3>
+                                <h4>En 2ème année de formation...</h4>
+                                <h4>IUT 2, UGA, Grenoble (38)</h4>
+                            </section>
+                        </div>
+                        <span class="timebar"></span>
+                        <div>
+                            <section>
+                                <h3>Equipier Polyvalent</h3>
+                                <h4>Mcdonald's</h4>
+                                <h4>Evreux (27)</h4>
+                            </section>
+                        </div>
+                    </part>
+                </article>
+                <article id="competence">
+                    <h2>Compétences Professionnels</h2>
+                    <part>
+                        <section>
+                            <img src="image/diriger.png">
+                            <h3>Optimiser des applications informatiques</h3>
+                        </section>
+                        <section>
+                            <img src="image/developpeur-web.png">
+                            <h3>Réaliser un développement d’application</h3>
+                        </section>
+                        <section>
+                            <img src="image/teamwork.png">
+                            <h3>Travailler dans une équipe informatique</h3>
+                        </section>
+                    </part>
+                    </section>
+                        
                     <h2>Compétences Techniques</h2>
-                    <section>
+                    <section class="competence_technique">
                         <part>
                             <a href="https://fr.wikipedia.org/wiki/HTML5" target="_blank"><img src="image/HTML5.png" alt="logo_html5">HTML5</a>
                             <a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank"><img src="image/CSS3.png" alt="logo_css3">CSS3</a>
@@ -87,82 +137,333 @@
                         </part>
                     </section>
                 </article>
-                <article id="formation">
-                    <div>
-                        <h2>Parcours Scolaire </h2>
-                        <section>
-                            <h3>BUT Informatique</h3>
-                            <h4>En 2ème année de formation...</h4>
-                            <h4>IUT 2, UGA, Grenoble (38)</h4>
-                        </section>
-                        <section>
-                            <h3>Baccalauréat Général</h3>
-                            <h4>Spécialités: NSI/Maths</h4>
-                            <h4>Diplomé avec mention assez bien</h4>
-                            <h4>Lycée Louis Modeste Leroy, Evreux (27)</h4>
-                        </section>
-                        <section>
-                            <h3>Brevet des collèges</h3>
-                            <h4>Diplomé avec mention bien</h4>
-                            <h4>Collège Marcel Pagnol, Gravigny (27)</h4>
-                        </section>
-                    </div>
-                    <span class="timebar"></span>
-                    <div>
-                        <h2>Expériences Professionnelles </h2>
-                        <h2 class="formation_tel">Ma formation </h2>
-                        <section class="margt">
-                            <h3>Equipier Polyvalent</h3>
-                            <h4>Mcdonald's</h4>
-                            <h4>Evreux (27)</h4>
-                        </section>
-                        <section class="margb">
-                            <h3>Stage Main-d'oeuvre</h3>
-                            <h4>Galat Entreprise</h4>
-                            <h4>Dardez (27)</h4>
-                        </section>
-                    </div>
-                </article>
                 <article id="projets">
                     <h2> Mes Projets</h2>
                     <div class="carousel-container">
                         <button id="prevBtn"> <img src="image/fleche_carrousel_gauche.jpg"> </button>
-                        <div class="visible_2">
+
                             <div class="carousel">
+
+                                <div class="menu-item">
+                                    <h3>Goblet of Souls</h3>
+                                    <div class="image_projet"><img src="image/icon_game.png" alt="icon_jeuRPG"></div>
+                                    <a onclick="openModal(jeu_RPG)"> Voir Plus </a>
+                                </div>
+
+                                <div class="menu-item">
+                                    <h3>Proxizen</h3>
+                                    <div class="image_projet"><img src="image/logo_proxizen.png" alt="logo_proxizen"></div>
+                                    <a onclick="openModal(proxizen)"> Voir Plus </a>
+                                </div>
+
                                 <div class="menu-item">
                                     <h3>Jeu de Dames</h3>
-                                    <img src="image/damier.png" alt="damier">
-                                    <p>Python</p>
-                                    <a href="Projet_1.html"> Voir le Projet </a>
+                                    <div class="image_projet"><img src="image/damier.png" alt="damier"></div>
+                                    <a onclick="openModal(jeu_dames)"> Voir Plus </a>
                                 </div>
+
+                                <div class="menu-item">
+                                    <h3>Gvent</h3>
+                                    <div class="image_projet"><img src="image/icon_gvent.png" alt="logo_gvent"></div>
+                                    <a onclick="openModal(gvent)"> Voir Plus </a>
+                                </div>
+
                                 <div class="menu-item">
                                     <h3>Site Alten</h3>
-                                    <img src="Projet_Alten/image/logo.jpg" alt="alten">
-                                    <div class="language"><p>HTML</p><p>CSS</p><p>JavaScript</p></div>
-                                    <a href="Projet_2.html"> Voir le Projet </a>
+                                    <div class="image_projet"><img src="Projet_Alten/image/logo.jpg" alt="alten"></div>
+                                    <a onclick="openModal(site_alten)"> Voir Plus </a>
                                 </div>
+
                                 <div class="menu-item">
                                     <h3>Aqua Athletics</h3>
-                                    <img src="image/logo_aqua.jpg" alt="logo site anglais">
-                                    <div class="language"><p>HTML</p><p>CSS</p><p>JavaScript</p></div>
-                                    <a href="Projet_3.html"> Voir le Projet </a>
+                                    <div class="image_projet"><img src="image/logo_aqua.jpg" alt="logo site anglais"></div>
+                                    <a onclick="openModal(site_aqua)"> Voir Plus </a>
                                 </div>
-                                <div class="menu-item">
-                                    <h3>Étude d'accidentologie</h3>
-                                    <img src="image/accident.png" alt="accident">
-                                    <div class="language"><p>SQL</p></div>
-                                    <a href="Projet_4.html"> Voir le Projet </a>
-                                </div>
-                                <div class="menu-item">
-                                    <h3>Autres Projets</h3>
-                                    <img src="image/autre_projets.png" alt="logo_projet">
-                                    <div class="language"><p>Java</p></div>
-                                    <a href="Projet_5.html"> Voir le Projet </a>
-                                </div>
+
                             </div>
-                        </div>
+
                         <button id="nextBtn"> <img src="image/fleche_carrousel_droite.jpg"> </button>
                     </div>
+
+                    <div class="modal-container">
+                        <div class="modal-overlay"></div>
+
+                        <div class="modal" id="jeu_RPG">
+                            <h1>Goblet of Souls</h1>
+
+                            <div class="timeline">
+
+                                <div class="step">
+                                    <h2>Présentation du projet</h2>
+                                    <p>
+                                        <strong>Goblet of Souls</strong> est un jeu d’action-aventure se déroulant dans un monde 
+                                        fantastique où une coupe royale a été volée, et où le joueur doit partir à sa récupération. 
+                                        C’est mon premier jeu vidéo réalisé en <strong>C# avec Unity</strong>, en utilisant uniquement 
+                                        des assets gratuits.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Objectifs du projet</h2>
+                                    <p>
+                                        Ce projet est avant tout un moyen d’apprentissage : je découvre la programmation de jeux, 
+                                        le level design, l’implémentation des mécaniques de gameplay et la gestion d’assets. L’objectif 
+                                        est de maîtriser les bases de la création de jeux vidéo afin de pouvoir évoluer vers des projets 
+                                        plus ambitieux et concrets à l’avenir.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Avancement et prochaines étapes</h2>
+                                    <p>
+                                        Je travaille actuellement sur les mécaniques principales, les niveaux et les interactions. 
+                                        Une première version jouable sera disponible sous peu, et permettra de tester le gameplay de 
+                                        base, les déplacements, les combats et la progression dans le monde fantastique. Ce projet me 
+                                        permet de progresser à mon rythme et de documenter chaque étape de l’apprentissage.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <a href="" class="download-btn" style="visibility: hidden;">
+                                <img src="image/telecharger.png"> Télécharger le jeu
+                            </a>
+                        </div>
+
+                        <div class="modal" id="proxizen">
+                            <h1>Proxizen</h1>
+
+                            <div class="timeline">
+
+                                <div class="step">
+                                    <h2>Présentation du projet</h2>
+                                    <p>
+                                        Nous travaillons actuellement sur un projet visant à créer une application destinée à faciliter 
+                                        la vie des aidants accompagnant des personnes atteintes de la maladie d’Alzheimer. L’objectif 
+                                        est de centraliser et organiser les informations importantes, suivre les activités quotidiennes, 
+                                        et fournir des outils d’assistance adaptés aux besoins des utilisateurs.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Mon rôle</h2>
+                                    <p>
+                                        Je suis impliqué dans la phase de <strong>conception</strong> et je développe actuellement le 
+                                        <strong>backend</strong> de l’application. Cela inclut la gestion des bases de données, la création 
+                                        des APIs et l’organisation de la logique serveur pour assurer un fonctionnement fiable et sécurisé 
+                                        de l’application.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Objectifs et enjeux</h2>
+                                    <p>
+                                        Ce projet permet de mettre en pratique des compétences en développement backend, en architecture 
+                                        d’application et en conception centrée utilisateur. L’enjeu principal est de créer un outil 
+                                        robuste et accessible qui simplifie la gestion quotidienne pour les aidants, tout en respectant 
+                                        la confidentialité et la sécurité des données personnelles.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <a href="" class="download-btn" style="visibility: hidden;">
+                                <img src="image/telecharger.png"> Visiter le site
+                            </a>
+                        </div>
+
+                        <div class="modal" id="jeu_dames">
+                            <h1>Jeu De Dames</h1>
+
+                            <div class="timeline">
+
+                                <div class="step">
+                                    <h2>Conception et développement</h2>
+                                    <p>
+                                        En 2023, j'ai réalisé un projet scolaire consistant en la création d'un jeu de notre choix.
+                                        J'ai décidé de faire un jeu de dames en Python avec Tkinter. L’objectif était de produire un jeu fonctionnel, 
+                                        intuitif, respectant les règles officielles. J'ai structuré le travail seul : logique du jeu,
+                                        gestion des déplacements, captures et interface graphique dynamique.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Compétences acquises</h2>
+                                    <p>
+                                        Ce projet m’a permis de renforcer mes compétences en POO, en gestion d’événements
+                                        Tkinter et en organisation de code modulaire. J’ai amélioré ma capacité à résoudre des
+                                        problèmes logiques, à optimiser des fonctions et à maintenir une méthode de travail
+                                        rigoureuse et autonome. J'ai utilisé Visual Studio Code pour le réaliser.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Version exécutable</h2>
+                                    <p>
+                                        J’ai aussi créé un fichier ZIP contenant un exécutable (.exe), permettant de tester le
+                                        jeu sans installer Python ou Tkinter. Vous pouvez le télécharger ci-dessous.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <a href="jeu_de_dames.zip" class="download-btn">
+                                <img src="image/telecharger.png"> Télécharger le jeu
+                            </a>
+                        </div>
+
+                        <div class="modal" id="gvent">
+                            <h1>Gvent</h1>
+
+                             <div class="timeline">
+
+                                <div class="step">
+                                    <h2>Présentation du projet</h2>
+                                    <p>
+                                        En fin de première année de BUT Informatique, j’ai participé au développement de 
+                                        <strong>Gvent</strong>, une application de gestion d’événements de jeux vidéo réalisée 
+                                        en équipe de cinq étudiants. Le projet devait être mené dans un temps limité, ce qui 
+                                        nous a poussés à organiser efficacement notre travail et à structurer le développement. 
+                                         L’objectif principal était de concevoir une application claire, fonctionnelle et pensée 
+                                        pour faciliter la gestion et le suivi d’événements vidéoludiques.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Rôle de chef de projet</h2>
+                                    <p>
+                                        J’ai occupé le rôle de <strong>chef de projet</strong>, ce qui impliquait la 
+                                        répartition des tâches, la coordination des membres de l’équipe, la planification des 
+                                        étapes de développement et la veille à la cohérence globale de l’application. J’ai 
+                                        également clarifié les objectifs de chaque sprint et assuré la 
+                                        communication interne afin que chacun puisse avancer efficacement dans la même direction.
+                                    </p>
+                                </div>
+
+                                
+                                <div class="step">    
+                                    <h2>Développement et architecture</h2>
+                                    <p>
+                                        Nous avons utilisé <strong>IntelliJ IDEA</strong> pour le développement Java et 
+                                        <strong>Scene Builder</strong> pour la création des interfaces graphiques en JavaFX. 
+                                        L’application a été construite en respectant le modèle <strong>MVC (Modèle - Vue - 
+                                        Contrôleur)</strong> afin de séparer clairement la logique, l’affichage et les actions 
+                                        utilisateur. Cette architecture nous a permis d’obtenir un code plus propre, modulaire 
+                                        et facile à maintenir.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <a href="gvent.rar" class="download-btn">
+                                <img src="image/telecharger.png"> Télécharger l'application
+                            </a>
+                        </div>
+
+                        <div class="modal" id="site_alten">
+
+                            <h1>Projet Alten</h1>
+
+                            <div class="timeline">
+
+                                <div class="step">
+                                    <h2>Objectif du projet</h2>
+                                    <p>
+                                        Lors de ma première année de BUT Informatique, j’ai participé à un projet en groupe
+                                        visant à reproduire le site web d'Alten, mais en l’adaptant à un public de collégiens.
+                                        L’objectif était de rendre le contenu plus accessible et compréhensible pour un jeune
+                                        public tout en conservant la structure et en modifiant légèrement l’identité visuelle
+                                        du site original. Ce projet nous a permis d'appliquer nos compétences en développement
+                                        web en utilisant les langages HTML, CSS et JavaScript afin de concevoir une interface
+                                        dynamique et intuitive.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Ma mission dans le groupe</h2>
+                                    <p>
+                                        Au sein de notre groupe de quatre étudiants, j’ai été chargé du développement de la
+                                        page <strong>"Secteurs d'Activités"</strong>. J’ai travaillé sur l’organisation du
+                                        contenu, la mise en page et l’interactivité pour rendre la navigation fluide et
+                                        agréable pour les utilisateurs. J’ai intégré des menus en JavaScript et optimisé le
+                                        design en CSS pour améliorer l’expérience utilisateur. Ce travail m’a permis de
+                                        renforcer mes compétences techniques, notamment en structuration HTML et en
+                                        manipulation native du JavaScript.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Gestion du projet</h2>
+                                    <p>
+                                        En plus de ma mission principale, j’ai également assumé, de manière indirecte, un rôle
+                                        de <strong>chef de projet</strong>. J’ai coordonné les différentes tâches entre les
+                                        membres de l’équipe, veillant au respect des délais et à la cohérence du site dans son
+                                        ensemble. J’ai aussi facilité la communication et la prise de décision pour assurer une
+                                        bonne répartition du travail et garantir un rendu final homogène. Cette expérience m’a
+                                        apporté une meilleure compréhension du travail en équipe et des responsabilités liées à
+                                        la gestion de projet.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <a href="Projet_Alten/main.html" class="download-btn" target="_blank">
+                                <img src="image/partager.png"> Visiter le site
+                            </a>
+                        </div>
+
+                        <div class="modal" id="site_aqua">
+                            <h1>Aqua Athletics</h1>
+
+                            <div class="timeline">
+
+                                <div class="step">
+                                    <h2>Présentation du projet</h2>
+                                    <p>
+                                        En fin de première année de BUT Informatique, nous avons réalisé en équipe un site web
+                                        (en anglais) simulant celui d’une entreprise proposant des activités nautiques au bord
+                                        d’un lac. L’objectif était de concevoir une plateforme attractive et fonctionnelle,
+                                        permettant aux utilisateurs de consulter les activités disponibles, obtenir des
+                                        informations pratiques et éventuellement simuler une réservation. Ce projet nous a
+                                        permis d'aborder les différentes étapes de conception d’un site web, du maquettage
+                                        jusqu’au développement final.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Travail d'équipe et compétences mobilisées</h2>
+                                    <p>
+                                        Ce projet a mobilisé plusieurs compétences acquises durant l’année, notamment en
+                                        développement web (HTML, CSS, JavaScript), en gestion de projet et en travail
+                                        collaboratif. L’un des objectifs principaux était de structurer et répartir efficacement
+                                        les tâches au sein de l’équipe, tout en assurant une cohérence visuelle et fonctionnelle
+                                        du site. Cela nous a également permis de mettre en pratique des notions de responsive
+                                        design et d’accessibilité.
+                                    </p>
+                                </div>
+
+                                <div class="step">
+                                    <h2>Outils et organisation</h2>
+                                    <p>
+                                        Nous avons utilisé des outils comme Visual Studio Code pour le développement, GitHub
+                                        pour la gestion de version, et Whimsical pour la création des maquettes. Le projet nous
+                                        a permis d’approfondir notre compréhension des langages du web, d’apprendre à organiser
+                                        un projet à plusieurs, et de mieux appréhender les enjeux d’une interface utilisateur
+                                        claire et intuitive. Ce travail d’équipe nous a également aidés à améliorer notre
+                                        communication et à découvrir des méthodes de collaboration efficaces dans un contexte
+                                        technique.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <a href="https://tokachioff.github.io/aqua_athletics/Site%20anglais/main.html" 
+                            class="download-btn" target="_blank">
+                                <img src="image/partager.png"> Visiter le site
+                            </a>
+                        </div>
+
+                    </div>
+
                 </article>
                 <article id="contact">
                     <h2> Me contacter </h2>
