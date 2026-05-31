@@ -185,8 +185,12 @@ if (document.getElementById("anglais")) {
     document.head.appendChild(style);
 
     const style_2 = document.createElement('style');
-    style_2.innerHTML = `#bio part div:first-child section:last-child::after { content: 'January 2021' !important; }`;
+    style_2.innerHTML = `#bio part div:first-child section:nth-child(2)::after { content: '2024 - Now' !important; }`;
     document.head.appendChild(style_2);
+
+    const style_3 = document.createElement('style');
+    style_3.innerHTML = `#bio part div:last-child section:nth-child(3)::after { content: 'May - July 2026' !important; }`;
+    document.head.appendChild(style_3);
 }
 
 const modalContainer = document.querySelector(".modal-container");
